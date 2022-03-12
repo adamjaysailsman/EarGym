@@ -5,6 +5,7 @@ import Home from './components/Home.js';
 import Navbar from './components/Navbar.js';
 import Piano from './components/Piano.js';
 import Splash from './components/Splash.js';
+import About from './components/About.js';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/piano" element={<Piano />} />
+          <Route path="/about" element={<About />} />
           <Route path="/splash" element={<Splash />} />
         </Routes>
       </HashRouter>

@@ -22,6 +22,9 @@ const Navbar = () => {
           <li>
             <Link to="/piano">PIANO</Link>
           </li>
+          <li>
+            <Link to="/about">ABOUT</Link>
+          </li>
         </ul>
       </nav>
     </header>
