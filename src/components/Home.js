@@ -1,7 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import css from '../App.css';
-import { play, generateTest, replayChord, confirmAnswer } from '../logic.js';
+import {
+  playChord,
+  generateTest,
+  replayChord,
+  confirmAnswer,
+} from '../logic.js';
 
 const Home = () => {
   // const audio = new Audio();
@@ -12,7 +17,7 @@ const Home = () => {
   // };
 
   // const play = () => {
-  //   audio.src = playlist[randIndex(playlist)];
+  //   audio.preload='true' src = playlist[randIndex(playlist)];
   //   audio.volume = 0.5;
   //   audio.play();
   // };
@@ -43,51 +48,154 @@ const Home = () => {
       </div>
 
       <div id="message"></div>
-      <audio id="major0" src="../chords/Majors/Major1.mp3"></audio>
-      <audio id="major1" src="../chords/Majors/Major1.mp3"></audio>
-      <audio id="major2" src="../chords/Majors/Major2.mp3"></audio>
-      <audio id="major3" src="../chords/Majors/Major3.mp3"></audio>
-      <audio id="major4" src="../chords/Majors/Major4.mp3"></audio>
-      <audio id="major5" src="../chords/Majors/Major5.mp3"></audio>
+      <audio
+        id="major0"
+        onPlay={playChord}
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Majors/Major1.mp3"
+      ></audio>
+      <audio
+        id="major1"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Majors/Major1.mp3"
+      ></audio>
+      <audio
+        id="major2"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Majors/Major2.mp3"
+      ></audio>
+      <audio
+        id="major3"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Majors/Major3.mp3"
+      ></audio>
+      <audio
+        id="major4"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Majors/Major4.mp3"
+      ></audio>
+      <audio
+        id="major5"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Majors/Major5.mp3"
+      ></audio>
 
-      <audio id="minor0" src="../chords/Minors/Minor0.mp3"></audio>
-      <audio id="minor1" src="../chords/Minors/Minor1.mp3"></audio>
-      <audio id="minor2" src="../chords/Minors/Minor2.mp3"></audio>
-      <audio id="minor3" src="../chords/Minors/Minor3.mp3"></audio>
-      <audio id="minor4" src="../chords/Minors/Minor4.mp3"></audio>
-      <audio id="minor5" src="../chords/Minors/Minor5.mp3"></audio>
+      <audio
+        id="minor0"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Minors/Minor0.mp3"
+      ></audio>
+      <audio
+        id="minor1"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Minors/Minor1.mp3"
+      ></audio>
+      <audio
+        id="minor2"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Minors/Minor2.mp3"
+      ></audio>
+      <audio
+        id="minor3"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Minors/Minor3.mp3"
+      ></audio>
+      <audio
+        id="minor4"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Minors/Minor4.mp3"
+      ></audio>
+      <audio
+        id="minor5"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Minors/Minor5.mp3"
+      ></audio>
 
       <audio
         id="diminished0"
+        style={{ display: 'none' }}
+        preload="true"
         src="../chords/Diminished/C Diminished.mp3"
       ></audio>
       <audio
         id="diminished1"
+        style={{ display: 'none' }}
+        preload="true"
         src="../chords/Diminished/D Diminished.mp3"
       ></audio>
       <audio
         id="diminished2"
+        style={{ display: 'none' }}
+        preload="true"
         src="../chords/Diminished/E Diminished.mp3"
       ></audio>
       <audio
         id="diminished3"
+        style={{ display: 'none' }}
+        preload="true"
         src="../chords/Diminished/F Diminished.mp3"
       ></audio>
       <audio
         id="diminished4"
+        style={{ display: 'none' }}
+        preload="true"
         src="../chords/Diminished/G Diminished.mp3"
       ></audio>
       <audio
         id="diminished5"
+        style={{ display: 'none' }}
+        preload="true"
         src="../chords/Diminished/A Diminished.mp3"
       ></audio>
 
-      <audio id="augmented0" src="../chords/Augmented/C Augmented.mp3"></audio>
-      <audio id="augmented1" src="../chords/Augmented/D Augmented.mp3"></audio>
-      <audio id="augmented2" src="../chords/Augmented/E Augmented.mp3"></audio>
-      <audio id="augmented3" src="../chords/Augmented/F Augmented.mp3"></audio>
-      <audio id="augmented4" src="../chords/Augmented/G Augmented.mp3"></audio>
-      <audio id="augmented5" src="../chords/Augmented/A Augmented.mp3"></audio>
+      <audio
+        id="augmented0"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Augmented/C Augmented.mp3"
+      ></audio>
+      <audio
+        id="augmented1"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Augmented/D Augmented.mp3"
+      ></audio>
+      <audio
+        id="augmented2"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Augmented/E Augmented.mp3"
+      ></audio>
+      <audio
+        id="augmented3"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Augmented/F Augmented.mp3"
+      ></audio>
+      <audio
+        id="augmented4"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Augmented/G Augmented.mp3"
+      ></audio>
+      <audio
+        id="augmented5"
+        style={{ display: 'none' }}
+        preload="true"
+        src="../chords/Augmented/A Augmented.mp3"
+      ></audio>
     </div>
   );
 };

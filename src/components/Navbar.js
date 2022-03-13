@@ -17,13 +17,10 @@ const Navbar = () => {
       <nav>
         <ul className="nav__links">
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/">CHORDS</Link>
           </li>
           <li>
             <Link to="/piano">PIANO</Link>
-          </li>
-          <li>
-            <Link to="/about">ABOUT</Link>
           </li>
         </ul>
       </nav>

@@ -20,7 +20,7 @@ function createWindow() {
     alwaysOnTop: true,
   });
 
-  splash.loadFile(`${__dirname}/src/components/Splash.js`);
+  splash.loadFile(`./src/components/Splash.js`);
   splash.center();
 
   setTimeout(function () {
@@ -33,7 +33,7 @@ function createWindow() {
   mainWindow.loadURL('http://localhost:3000');
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
