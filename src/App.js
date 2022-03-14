@@ -4,7 +4,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home.js';
 import Navbar from './components/Navbar.js';
 import Piano from './components/Piano.js';
-import Splash from './components/Splash.js';
+// import Splash from './components/Splash.js';
 import About from './components/About.js';
 
 const App = () => {
@@ -15,8 +15,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/piano" element={<Piano />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/splash" element={<Splash />} />
         </Routes>
       </HashRouter>
     </div>

@@ -9,23 +9,10 @@ import {
 } from '../logic.js';
 
 const Home = () => {
-  // const audio = new Audio();
-  // const playlist = [sound];
-
-  // let randIndex = function (arr) {
-  //   return Math.floor(Math.random() * arr.length);
-  // };
-
-  // const play = () => {
-  //   audio.preload='true' src = playlist[randIndex(playlist)];
-  //   audio.volume = 0.5;
-  //   audio.play();
-  // };
-
   return (
     <div id="container">
       <h1>EAR GYM</h1>
-      <h4>An ear training application</h4>
+      <h4>The key to a good ear</h4>
       <button id="startButton" className="button" onClick={generateTest}>
         Start Test
       </button>

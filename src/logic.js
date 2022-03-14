@@ -53,33 +53,15 @@ const playlist = [
   augmented5,
 ];
 
-// const audio = new Audio('./chords/Majors/Major0.mp3');
-
-// audio.play();
-
-// let randIndex = function (arr) {
-//   return Math.floor(Math.random() * arr.length);
-// };
-
-// const playChord = function (id) {
-//   console.log('ID:', id);
-//   console.log(document.getElementById(id));
-//   new Audio(document.getElementById(id)).play();
-// };
-
-export const playChord = function (id) {
-  //   '🚀 ~ file: logic.js ~ line 72 ~ playChord ~ document.getElementById(id);',
-  //   document.getElementById(id)
-  // );
-  //   const test = new Audio(dminor);
-  //   test.play();
-};
-
 let questions = [];
 let answers = [];
 let questionIndex = 0;
 let correctAnswers = 0;
 let questionCount = 10;
+
+export const playChord = function (id) {
+  document.getElementById(id).play();
+};
 
 const hide = (id) => {
   document.getElementById(id).style.display = 'none';
@@ -157,8 +139,6 @@ export const generateTest = function () {
     questions[idx] = chord.code + getRandomIndex(); // major + 0
     answers[idx] = chord;
   }
-  console.log(questions);
-
   nextQuestion();
 };
 
@@ -173,14 +153,16 @@ let nextQuestion = async function () {
 
     if (lowercasePlaylist.indexOf(questions[questionIndex]) !== -1) {
       const currentSound = new Audio(lowercasePlaylist);
-
+      currentSound.volume = 0.5;
       currentSound.play();
     }
   }
 };
 
 export const replayChord = function () {
-  playChord(questions[questionIndex]);
+  const replay = new Audio(questions[questionIndex]);
+
+  replay.play();
 };
 
 export const confirmAnswer = function () {
@@ -196,8 +178,6 @@ export const confirmAnswer = function () {
 export const evaluateAnswer = function () {
   let id = document.getElementById('answer').value;
   let chord = getChord(id);
-  console.log('ID', id);
-  console.log('CHORD', chord);
   if (chord.code === answers[questionIndex].code) {
     correctAnswers++;
     show('message', '&nbsp');
@@ -234,10 +214,4 @@ let finishGame = function () {
         ' correct. Practice makes perfect!'
     );
   }
-
-  // setTimeout(function () {
-  //   show('startButton');
-  //   hide('questionArea');
-  //   generateTest();
-  // }, 2000);
 };

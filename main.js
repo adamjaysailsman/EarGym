@@ -8,26 +8,28 @@ function createWindow() {
     width: 800,
     height: 600,
     show: false,
+    // fullscreen: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
 
   const splash = new BrowserWindow({
-    width: 600,
-    height: 400,
+    // width: 700,
+    // height: 500,
     frame: false,
     alwaysOnTop: true,
+    fullscreen: true,
   });
 
-  splash.loadFile(`./src/components/Splash.js`);
+  splash.loadFile(`./src/components/Splash.html`);
   splash.center();
 
   setTimeout(function () {
     splash.close();
     mainWindow.center();
     mainWindow.show();
-  }, 5000);
+  }, 6000);
 
   // and load the index.html of the app.
   mainWindow.loadURL('http://localhost:3000');
