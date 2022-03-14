@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div id="container">
       <h1>EAR GYM</h1>
-      <h4>The key to a good ear</h4>
+      <h4>An ear training workout</h4>
       <button id="startButton" className="button" onClick={generateTest}>
         Start Test
       </button>
