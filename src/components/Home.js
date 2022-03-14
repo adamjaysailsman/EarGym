@@ -27,6 +27,8 @@ const Home = () => {
           <option value="1">Minor</option>
           <option value="2">Diminished</option>
           <option value="3">Augmented</option>
+          <option value="4">Major-Seventh</option>
+          <option value="5">Minor-Seventh</option>
         </select>
         <button className="button" onClick={confirmAnswer}>
           Confirm Answer
