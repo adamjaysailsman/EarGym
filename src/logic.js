@@ -33,6 +33,13 @@ import majorseventh3 from './chords/Major-Sevenths/majorseventh3.mp3';
 import majorseventh4 from './chords/Major-Sevenths/majorseventh4.mp3';
 import majorseventh5 from './chords/Major-Sevenths/majorseventh5.mp3';
 
+import minorseventh0 from './chords/Minor-Sevenths/minorseventh0.mp3';
+import minorseventh1 from './chords/Minor-Sevenths/minorseventh1.mp3';
+import minorseventh2 from './chords/Minor-Sevenths/minorseventh2.mp3';
+import minorseventh3 from './chords/Minor-Sevenths/minorseventh3.mp3';
+import minorseventh4 from './chords/Minor-Sevenths/minorseventh4.mp3';
+import minorseventh5 from './chords/Minor-Sevenths/minorseventh5.mp3';
+
 const playlist = [
   major0,
   major1,
@@ -64,6 +71,12 @@ const playlist = [
   majorseventh3,
   majorseventh4,
   majorseventh5,
+  minorseventh0,
+  minorseventh1,
+  minorseventh2,
+  minorseventh3,
+  minorseventh4,
+  minorseventh5,
 ];
 
 let questions = [];
@@ -125,6 +138,12 @@ let getChord = function (id) {
         name: 'Major-Seventh',
       };
       break;
+    case '5':
+      chord = {
+        code: 'minorseventh',
+        name: 'Minor-Seventh',
+      };
+      break;
 
     default:
   }
@@ -140,7 +159,7 @@ let getRandomIndex = function () {
 };
 
 const getRandomChord = () => {
-  let chord = getRandomInteger(0, 5); //if adding more chords, increase this by one
+  let chord = getRandomInteger(0, 6); //if adding more chords, increase this by one
   return getChord(chord);
 };
 
@@ -157,7 +176,7 @@ export const generateTest = function () {
     let chord = getRandomChord(); // major
     questions[idx] = chord.code + getRandomIndex(); // major + 0
     answers[idx] = chord;
-    console.log(questions);
+    console.log('QUESTIONS:', questions);
   }
   nextQuestion();
 };
